@@ -1,68 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
+    <title>Marcos Bianchi | marcos@marcosbianchi.com.ar</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="icon" type="image/png" href="favicon.png" />
 
-.title {
-  color: grey;
-  font-size: 18px;
-}
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.css">
 
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
+	<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.6/dist/semantic.min.js"></script>
 
-button:hover, a:hover {
-  opacity: 0.7;
-}
+	<script src="jquery.translate.js"></script>
 
-* {box-sizing: border-box}
-
-.container {
-  width: 100%;
-  background-color: #ddd;
-}
-
-.skills {
-  text-align: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-}
-
-.html {width: 90%; background-color: #4CAF50;}
-.js {width: 90%; background-color: #f44336;}
-.css {width: 80%; background-color: #2196F3;}
-.php {width: 60%; background-color: #808080;}
-.AWS {width: 50%; background-color: #808080;}
-  
-  
-</style>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KNH7Q55R4W"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -71,54 +25,102 @@ button:hover, a:hover {
 
   gtag('config', 'G-KNH7Q55R4W');
 </script>
-  
-</head>
-<body>
+<body class="ui container">
+	<div class="ui row">
+		<div class="ui compact small buttons">
+			<button id="lang-en" class="ui active button" onclick="translator.lang('en')"><i class="uk flag"></i> English</button>
+			<button id="lang-es" class="ui button" onclick="translator.lang('es')"><i class="argentina flag"></i>Español</button>
+		</div>
+	</div>
+	<div class="ui row">
+		<img class="ui centered medium circular image" src="images/marcos-profile.jpeg">
+		<h1 class="ui centered header">Marcos Bianchi
+			<div class="sub header">
+				<p><i class="graduation cap icon"></i> <span class="trn">Systems Engineer</span> &mdash; <i class="paper plane outline icon"></i></i><span class="trn">All About Airplanes </span></p>
+				<p><i class="briefcase icon"></i><span class="trn">DevOps Engineer @ <a href="https://cohley.com">COHLEY</a></span> &mdash; <i class="dharmachakra icon"></i><span class="trn"><a href="https://www.credential.net/9392edd8-b456-48e0-9db3-007da229fd9c">Google Professional Cloud Architect</a> </a></span></p>
+				<p><i class="map marker alternate icon"></i><span class="trn">Cordoba, Argentina</span></p>
+				<a class="ui labeled basic primary icon button" href="mailto:marcos@marcosbianchi.com.ar">
+					<i class="icon envelope"></i>
+					<span class="trn">SEND ME AN E-MAIL</span>
+				</a>
+			</div>
+		</h1>
+		<div class="ui horizontal divider">
+				<i class="angle double down icon"></i> <span class="trn">or find me on social media</span> <i class="angle double down icon"></i>
+		</div>
+		<div class="ui link cards">
+			<a class="ui centered card" href="https://linkedin.com/in/marcosbianchi">
+				<div class="ui slide masked reveal medium centered image">
+					<img src="images/linkedin.png" class="visible content">
+					<img src="images/linkedin_qr.jpg" class="hidden content">
+				</div>
+				<div class="content">
+					<div class="header trn">Connect on LinkedIn</div>
+				</div>
+			</a>
+			
+			<a class="ui centered card" href="https://twitter.com/pacobianchi">
+				<img class="ui medium centered image" src="images/twitter.png"></img>
+				<div class="content">
+					<div class="header trn">Follow me on Twitter</div>
+				</div>
+			</a>
+			
+			<a class="ui centered card" href="https://www.github.com/marcosbianchi">
+				<img class="ui medium centered image" src="images/github.png"></img>
+				<div class="content">
+					<div class="header trn">My GitHub Repo</div>
+				</div>
+			</a>
 
+		
+		</div>
+	</div>
+	<div class="ui hidden divider"></div>
+<script>
+var dict = {
+  "Systems Engineer": {
+    es: "Ingeniero en Sistemas"
+  },
+  "Infrequent Traveller": {
+    es: "Viajero Infrecuente"
+  },
+  "Amateur Photographer": {
+    es: "Fotógrafo aficionado"
+  },
+  "web page made using <a href=\"https://semantic-ui.com/\">Semantic-UI</a>": {
+     es: "página web realizada con <a href=\"https://semantic-ui.com/\">Semantic-UI</a>"
+  },
+  "Follow me on Twitter": {
+	  es: "Seguime en Twitter"
+  },
+  "Connect on LinkedIn": {
+	  es: "Conectemonos en LinkedIn"
+  },
+  "My GitHub Repo": {
+	  es: "Mi repo en GitHub"
+  },
+  "SEND ME AN E-MAIL": {
+	  es: "ENVIAME UN E-MAIL"
+  },
+  "Cordoba, Argentina": {
+          es: "Cordoba, Argentina"
+  }
+}
 
-<div class="card">
-  <img src="/images/profile.jpg" alt="Marcos" style="width:100%">
-  <h1>Marcos Bianchi</h1>
-  <p class="title">Sr. Sysadmin evolving to DevOps engineer</p>
-  <p>Córdoba, Argentina</p>
-  <div style="margin: 24px 0;">
-    <a href="https://twitter.com/pacobianchi"><i class="fa fa-twitter"></i></a>  
-    <a href="https://linkedin.com/in/marcosbianchi/"><i class="fa fa-linkedin"></i></a>  
-    <a href="https://github.com/marcosbianchi/"><i class="fa fa-github"></i></a>  
-  </div>
-  
-<p>Linux</p>
-<div class="container">
-  <div class="skills html">90%</div>
-</div>
+var userLang = navigator.language || navigator.userLanguage;
+userLang = userLang.split('-')[0]
+if($('#lang-' + userLang).length) {
+    $('#lang-en').removeClass('active');
+    $('#lang-' + userLang).addClass('active');
+}
 
-<p>Firewalls and Security</p>
-<div class="container">
-  <div class="skills js">90%</div>
-</div>
+var translator = $('body').translate({lang: userLang, t: dict}); //use English
 
-<p>Networking</p>
-<div class="container">
-  <div class="skills css">80%</div>
-</div>
+$('.buttons').on('click', '.button', function() {
+  $(this).addClass('active').siblings().removeClass('active');
+});
 
-<p>Terraform</p>
-<div class="container">
-  <div class="skills php">60%</div>
-</div>
-
-<p>AWS</p>
-<div class="container">
-  <div class="skills AWS">50%</div>
-</div>
-  
-  
-  
-</div>
-
+</script>
 </body>
 </html>
-
-
-
-
